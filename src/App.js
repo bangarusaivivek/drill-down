@@ -5,7 +5,6 @@ import './Components/Styles.css'
 function App() {
   return (
     <div className="App">
-     
       <Data />
     </div>
   );

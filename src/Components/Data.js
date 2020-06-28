@@ -30,25 +30,27 @@ class Data extends Component {
     render() {
         // const {open} = this.props
         const {localdiskc,localdiskd,localdiske} = this.state
+        // console.log(this.props.children)
         // console.log(programfiles,users,windows)
         // const ele = open ? (<><div>Program Files</div>
         //                     <div>Users</div>
         //                     <div>Windows</div></>)
         //                 : <></>
+
         return (
             <>
                 
                 
                 <div id="localdiskc" className="main" onClick={this.handleChange}>
-                    Local Disk (:C)
+                    {localdiskc ? "v Local  Disk (:C)" : "> Local Disk (:C)"}
                     <LocalDiskC1 open={localdiskc}/>
                 </div>
                 <div id="localdiskd" className="main" onClick={this.handleChange}>
-                    Local Disk (:D)
+                    {localdiskd ? "v Local  Disk (:D)" : "> Local Disk (:D)"}
                     <LocalDiskD1 open={localdiskd} />
                 </div>
                 <div id="localdiske" className="main" onClick={this.handleChange}>
-                    Local Disk (:E)
+                    {localdiske ? "v Local  Disk (:E)" : "> Local Disk (:E)"}
                     <LocalDiskE1 open={localdiske} />
                 </div>
             </>

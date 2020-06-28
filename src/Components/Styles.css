@@ -30,3 +30,10 @@ body{
     margin : 5px;
     padding-left: 20px;
 }
+/* 
+.main:hover{
+    background-color: lightgray;
+}
+.child:hover{
+    background-color: lightgray;
+} */

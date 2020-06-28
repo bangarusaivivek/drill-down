@@ -30,7 +30,7 @@ class LocalDiskC1 extends Component {
     render() {
         const {open} = this.props
         const {programfiles,users,windows} = this.state
-        console.log(programfiles,users,windows)
+        
         // const ele = open ? (<><div>Program Files</div>
         //                     <div>Users</div>
         //                     <div>Windows</div></>)
@@ -39,18 +39,24 @@ class LocalDiskC1 extends Component {
             <>
                 {open &&
                     (<>
+                        
                         <div id="programfiles" className="child" onClick={this.handleChange}>
-                            Program Files
+                            {programfiles ? "v Program Files" : "> Program Files"}
                             <ProgramFiles open={programfiles}/>
                         </div>
-                        <div id="users" className="child" onClick={this.handleChange}>
-                            Users
+
+                        <div id="users" className="child" onClick={this.handleChange}> 
+                            {programfiles ? "v Users" : "> Users"}
                             <Users open={users} />
                         </div>
+                        
+                       
                         <div id="windows" className="child" onClick={this.handleChange}>
-                            Windows
+                            {programfiles ? "v Windows" : "> Windows"}
                             <Windows open={windows} />
                         </div>
+                        
+                        
                     </>)
                 }
             </>

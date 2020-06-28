@@ -39,15 +39,15 @@ class LocalDiskD1 extends Component {
                 {open &&
                     (<>
                         <div id="personals" className="child" onClick={this.handleChange}>
-                            Personals
+                            {personals ? "v Personals" : "> Personals"}
                             <Personals open={personals}/>
                         </div>
                         <div id="projects" className="child" onClick={this.handleChange}>
-                            Projects
+                            {projects ? "v Projects" : "> Projects"}
                             <Projects open={projects} />
                         </div>
                         <div id="office" className="child" onClick={this.handleChange}>
-                            Office
+                            {office ? "v Office" : "> Office"}
                             <Office open={office} />
                         </div>
                     </>)
